@@ -1,3 +1,5 @@
+import oop.Employee
+import oop.Person
 fun main() {
 //    println("Hello World!")
 //    // Type is fixed once value is assigned
@@ -91,16 +93,26 @@ fun main() {
 //        print(i)
 //    }
 
-    // extension function (extends features onto a class)
-    fun String.getEmotion(): String {
-        return when {
-            last() == '!' -> "Excited"// last is from string class
-            last() == '?' -> "Curious"
-            last() == '.' -> "Calm"
-            else -> "Unknown"
-        }
-    }
-    val s = "How are you?"
-    println(s.getEmotion())
+//    // extension function (extends features onto a class)
+//    fun String.getEmotion(): String {
+//        return when {
+//            last() == '!' -> "Excited"// last is from string class
+//            last() == '?' -> "Curious"
+//            last() == '.' -> "Calm"
+//            else -> "Unknown"
+//        }
+//    }
+//    val s = "How are you?"
+//    println(s.getEmotion())
+    val p1 = Person("John", "Smith", 19)
+    println("My name is ${p1.firstName} ${p1.lastName}, and I am ${p1.age} years old")
+    println(p1.fullName)
+
+    val p3 = Person(3);
+    println(p3.id)
+    println("My name is ${p3.firstName} ${p3.lastName}, and I am ${p3.age} years old")
+
+    val e1 = Employee("XYZ")
+    println(e1.id)
 
 }
